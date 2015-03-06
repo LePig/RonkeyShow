@@ -1,0 +1,36 @@
+---
+layout: page
+
+permalink: /cart_1/
+---
+<html>
+<body>
+    <h2>Select an account type</h2>
+        <form action="/cart_2">
+            <input type="radio" name="managed_infrastructure" value="managed_infrastructure"><b>Managed Infrastructure</b><br>
+                <p>We help you get set up, and we're there whenever you need us.<br/>
+                Service level pricing is the greater of $50/month or your Managed
+                Infrastructure service level rate. Service level rates and minimums
+                apply only when you use Cloud Servers.</p>
+
+            <br>
+
+            <input type="radio" name="sysops" value="sysops"><b>Managed Operations: Sysops</b><br>
+                <p>We run your entire environment for you.<br/>
+                Service level pricing is the greater of $500/month
+                or your Managed Operations service level rate. Service
+                level rates and minimums apply only when you use Cloud Servers.</p>
+
+            <br>
+
+            <input type="radio" name="devops" value="devops"><b>Managed Operations: DevOps Automation</b><br>
+                <p>We’ll treat your infrastructure as code and
+                automate your application environment for rapid deployments and scaling.<br/>
+                Service level pricing is your Managed Operations service level rate plus
+                a $2,500/month flat fee. Service level rates apply only when you
+                use Cloud Servers.</p>
+
+            <input type="submit" value="Next Step">
+        </form>
+</body>
+</html>

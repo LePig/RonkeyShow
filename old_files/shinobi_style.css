@@ -1,0 +1,49 @@
+#header {
+    position: relative;
+    left: 0px;
+    width: 100%;
+    padding: 2px;
+    background: rgb(160, 0, 0);
+    text-align: center;
+}
+
+#header h1 {
+    color: white;
+    font: italic bold 12px/30px Georgia, serif;
+    font-size: 300%;
+}
+
+#subnav-wrap {
+    position: abosolute;
+    text-align: left;
+    width: 100%;
+    z-index: 35;
+}
+
+#subnav-wrap #subnav-inner {
+    border-radius; 0 0 5px 5px;
+    margin: 0 auto;
+    width: 960px;
+    padding: 0;
+    background: rgb(176,176,176);
+    display: block
+}
+
+#subnav-wrap #subnav-inner ul li a {
+    background color; rgb(128,128,128);
+    padding: 13px, 18px, 12px;
+    display; block;
+}
+
+
+#subnav-links {
+
+}
+
+.subnav {
+
+}
+
+.subnav-selected {
+
+}

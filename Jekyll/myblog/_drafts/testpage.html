@@ -1,0 +1,40 @@
+---
+layout: page
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Rackspace Tag Test Site</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+
+        <p>We help you design, build and run your workloads to help you achieve success in the cloud.
+        Let Rackspace managed cloud backed by Fanatical Support® handle the headaches and
+        details of IT so you can keep your focus where it matters most - growing your business.</p>
+
+        <h3>Manged Infrastructure</h3>
+            <p>Get infrastructure and expert guidance—help with architecture, security, and code
+            development, backed by Cloud Engineers available 24x7x365.</p>
+
+        <h3>Managed Operations - SysOps</h3>
+            <p>Let us help run your day-to-day cloud operations, including infrastructure monitoring,
+            OS maintenance and patching, application maintenance, and more—so you can focus on your business.</p>
+
+        <h3>Managed Operations - DevOps Automation</h3>
+            <p>Don't take on DevOps alone—let our cloud experts do it for you. Get everything in our SysOps
+            service level, plus DevOps experts and tools for continuous integration and deployment and for
+            application monitoring to keep your environment running at peak efficiency.</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe test <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

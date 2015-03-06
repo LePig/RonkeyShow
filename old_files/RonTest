@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{background: #1a1a1a ; color: #fff;}
+        #content{background: white;color:black;}
+        table{width: 50%}
+        tr td{border: 1px solid #ccc;}
+
+    </style>
+    <script type="text/javascript">
+        function removeRows() {
+                var table = document.querySelector('table')
+                var rows = table.rows
+                rows = Array.prototype.slice.call(rows,0)
+                console.dir(rows[1])
+
+            for(var i=0; i < rows.length; i++) {
+            	var row = rows[i]
+	            var col = row.cells[1]
+	            if(col.textContent.toLowerCase() == 'remove me'){
+	                row.parentElement.removeChild(row)
+	            }
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <img src="http://images.cdn.rackspace.com/header/rackspace-logo-nav-173x51-mangd.png">
+</header>
+<div id="content">
+    <h1>Task: Write code to remove the rows labeled with "remove me"</h1>
+    <button onclick="removeRows()">Remove Rows</button>
+    <table>
+        <thead>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+</div>
+<script>
+    window.onload = function(){
+        // Dynamically add a table records for testing
+        var tbody = document.querySelector('table').tBodies[0];
+        for(var i =0; i < 10; i++) {
+            // Add a few records
+            var row = document.createElement('tr');
+            row.id = Math.floor(Math.random() * 100);
+            var value = (row.id % 2 == 0) ? 'remove me': 'keep me';
+            value = (Math.floor(Math.random() * 100) % 2 == 0) ? value.toUpperCase() : value;
+            row.innerHTML = '<td>' + row.id + '</td><td>' + value + '</td>'
+            var row = row.cloneNode(true);
+            tbody.appendChild(row);
+        }
+    }
+</script>
+</body>
+</html>
